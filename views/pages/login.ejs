@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/login.css" />
+  <style>
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .form-footer a {
+      text-decoration: none;
+      color: #007BFF;
+      font-size: 0.9em;
+    }
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+    .error-message {
+      color: red;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form action="/login" method="POST">
+    <h2>Login</h2>
+    
+    <% if (message) { %>
+      <p class="error-message"><%= message %></p>
+    <% } %>
+
+    <input type="email" name="email" placeholder="Email" required /><br />
+    <input type="password" name="password" placeholder="Password" required /><br />
+
+    <div class="form-footer">
+      <a href="/forgot-password">Forget Password?</a>
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</body>
+</html>
