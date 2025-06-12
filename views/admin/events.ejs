@@ -191,7 +191,7 @@
           <% events.forEach(event => { %>
             <div class="event-card">
               <% if (event.event_url) { %>
-                <img src="/eventuploads/<%= events.event_url %>" />
+                <img src="<%= event.event_url %>" />
               <% } else { %>
                 <img src="/images/default-event.jpg" />
               <% } %>
