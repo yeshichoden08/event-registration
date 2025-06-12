@@ -113,7 +113,7 @@ exports.postSignup = async (req, res) => {
 
 
     // Send verification email
-    const verificationLink = `http://localhost:${process.env.PORT}/verify-email?token=${verificationToken}`;
+    const verificationLink = `https://event-registration-y839.onrender.com/verify-email?token=${verificationToken}`;
 
 
     await transporter.sendMail({
